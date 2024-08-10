@@ -59,6 +59,10 @@ function* generateQuestions() {
 
 function App() {
   const [characters, setCharacters] = useState<any[]>([]);
+  const questionsGenerator = generateQuestions();
+  const initialQuestion = questionsGenerator.next().value || { question: "", choices: [], correctChoice: "" };
+  const [_questions, _setQuestions] = useState<QuestionData[]>([initialQuestion]);
+  
 
   const drawCharacter: () => void  = () => {
     const charactersNotInList = allCharacters.filter(character => !characters.includes(character));

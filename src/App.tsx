@@ -1,9 +1,8 @@
-import { useState } from "react";
 import "./App.css";
 import Menu from './menu'; // Adjust the path if necessary
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>

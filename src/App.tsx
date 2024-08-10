@@ -12,7 +12,12 @@ function getLastElement<Type>(array: Type[]): Type | undefined {
   return array[array.length - 1];
 }
 
-const allCharacters = brawlstarsJson.flatMap((category: string[]) => category.map(imageSrc => ({ name: getLastElement(imageSrc.split('/'))?.split('.png')[0], image: imageSrc })));
+export interface Character {
+  name: string;
+  image: string;
+}
+
+const allCharacters: Character[] = brawlstarsJson.flatMap((category: string[]) => category.map(imageSrc => ({ name: getLastElement(imageSrc.split('/'))?.split('.png')[0]!, image: imageSrc })));
 
 // const allCharacters = [
 //   {

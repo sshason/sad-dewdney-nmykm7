@@ -1,6 +1,7 @@
 // BrawlStars.tsx
 import { useState } from "react";
 import Question from "./question";
+import { Character } from "./App";
 
 interface QuestionData {
   question: string;
@@ -36,10 +37,7 @@ function* generateQuestions() {
   }
 }
 
-interface Character {
-    name: string;
-    image: string;
-  }
+
   
   interface BrawlStarsProps {
     allCharacters: Character[];

@@ -1,0 +1,16 @@
+/* Characters.css */
+.characters-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow the container to wrap its children */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px;
+    min-height: 100px; /* Ensure the container has an initial height */
+  }
+  
+  .character-item {
+    margin-right: 10px;
+    text-align: center;
+  }
+  
+  

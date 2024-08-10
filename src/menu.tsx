@@ -11,19 +11,22 @@ const menuItems = [
   { name: 'חלקי גוף', image: WheelBodyPartsImage, url: 'https://wheelofnames.com/he/5f6-3pn' },
   { name: 'פקמן', image: 'https://th.bing.com/th/id/OIP.WnQgGM1kKQDCVouw8iO5kQHaEc?w=300&h=180&c=7&r=0&o=5&pid=1.7', url: 'https://pacman.js.org/' },
   { name: 'חשבון', image: 'https://th.bing.com/th/id/OIP.YQt1G5Ho2Gv6jzCcktHDpwHaHa?w=165&h=180&c=7&r=0&o=5&pid=1.7', url: 'https://www.matific.com/students/app/7.5.7/lite/' },
-  // Add more items as needed
+  { name: 'Brawl Stars', image: 'https://th.bing.com/th/id/OIP.jts_eWK_m0N25cf5oATDFAHaEK?w=321&h=180&c=7&r=0&o=5&pid=1.7', url: '/brawlstars' },
 ];
 
 const Menu: React.FC = () => {
     return (
-      <div className="menu-container">
-        {menuItems.map((item, index) => (
-          <a key={index} href={item.url} target="_blank" rel="noopener noreferrer" className="menu-item">
-            <img src={item.image} alt={item.name} className="menu-item-image" />
-            <div className="menu-item-name">{item.name}</div>
-          </a>
-        ))}
-      </div>
+      <>
+        <h1>המחשב של תום</h1>
+        <div className="menu-container">
+          {menuItems.map((item, index) => (
+            <a key={index} href={item.url} target="_blank" rel="noopener noreferrer" className="menu-item">
+              <img src={item.image} alt={item.name} className="menu-item-image" />
+              <div className="menu-item-name">{item.name}</div>
+            </a>
+          ))}
+        </div>
+      </>
     );
   };
 

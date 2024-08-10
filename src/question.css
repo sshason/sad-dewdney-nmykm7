@@ -1,0 +1,34 @@
+/* question.css */
+
+.question-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.question-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.choices-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.choice-item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-item:hover {
+    background-color: #f0f0f0;
+}
+
+.selected-choice {
+    font-weight: bold;
+    color: #007bff;
+}

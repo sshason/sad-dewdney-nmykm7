@@ -1,26 +1,6 @@
 // BrawlStars.tsx
 import { useState } from "react";
 import Question from "./question";
-import Characters from "./charaters";
-
-const allCharacters = [
-  {
-      name: "Shelly",
-      image: "https://th.bing.com/th/id/OIP.tMaO1vPm-AiJ_Pm2YAO6mAAAAA?w=115&h=193&c=7&r=0&o=5&pid=1.7"
-  },
-  {
-      name: "Leon",
-      image: "https://th.bing.com/th/id/OIP.P6cnim9x6QykoA4R76UkIwHaFj?w=245&h=184&c=7&r=0&o=5&pid=1.7"
-  },
-  {
-      name: "Nita",
-      image: "https://th.bing.com/th/id/OIP.7UuQK6vtn88CFDzgeDy1ZgHaFj?w=226&h=180&c=7&r=0&o=5&pid=1.7"
-  },
-  {
-      name: "Ruffs",
-      image: "https://th.bing.com/th/id/OIP.N7syvExVZKzJ-TM5w5l97wHaMX?w=115&h=183&c=7&r=0&o=5&pid=1.7"
-  },
-]
 
 interface QuestionData {
   question: string;
@@ -56,8 +36,18 @@ function* generateQuestions() {
   }
 }
 
-const BrawlStars = () => {
-  const [characters, setCharacters] = useState<any[]>([]);
+interface Character {
+    name: string;
+    image: string;
+  }
+  
+  interface BrawlStarsProps {
+    allCharacters: Character[];
+    characters: Character[];
+    setCharacters: React.Dispatch<React.SetStateAction<Character[]>>;
+  }
+
+const BrawlStars: React.FC<BrawlStarsProps> = ({ allCharacters, characters, setCharacters }) => {
   const questionsGenerator = generateQuestions();
   const [question, setQuestion] = useState<QuestionData>(questionsGenerator.next().value!);
 
@@ -74,7 +64,7 @@ const BrawlStars = () => {
     if (characters.length === 0) {
       return;
     }
-    const randomIndex = Math.floor(Math.random() * characters.length);
+    const randomIndex = characters.length - 1;
     const newCharacters = [...characters];
     newCharacters.splice(randomIndex, 1);
     setCharacters(newCharacters);
@@ -92,7 +82,7 @@ const BrawlStars = () => {
 
   return (
     <>
-      <Characters characters={characters} />
+        <h1>Brawl Stars</h1>
       <Question question={question.question} choices={question.choices} correctChoice={question.correctChoice} successCallback={onSuccessfulAnswer} failureCallback={onFailedAnswer} />
     </>
   );

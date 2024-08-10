@@ -3,6 +3,7 @@ import './Menu.css'; // Assuming you will create a CSS file for styling
 import WheelBodyPartsImage from './assets/wheel_body_parts.jpg';
 import WheelColorImage from './assets/wheel_colors.png';
 import WheelFamilyNames from './assets/wheel_family_names.png';
+import { Link } from 'react-router-dom';
 
 
 const menuItems = [
@@ -19,11 +20,11 @@ const Menu: React.FC = () => {
       <>
         <h1>המחשב של תום</h1>
         <div className="menu-container">
-          {menuItems.map((item, index) => (
-            <a key={index} href={item.url} rel="noopener noreferrer" className="menu-item">
-              <img src={item.image} alt={item.name} className="menu-item-image" />
-              <div className="menu-item-name">{item.name}</div>
-            </a>
+          {menuItems.map((item) => (
+          <Link to={item.url} rel="noopener noreferrer" className="menu-item">
+            <img src={item.image} alt={item.name} className="menu-item-image" />
+            <div className="menu-item-name">{item.name}</div>
+          </Link>
           ))}
         </div>
       </>

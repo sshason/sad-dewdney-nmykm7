@@ -13,4 +13,8 @@
     text-align: center;
   }
   
-  
+  .character-item img {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}

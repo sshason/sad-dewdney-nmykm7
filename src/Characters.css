@@ -22,12 +22,24 @@
 
 .category {
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow the container to wrap its children */
+    flex-direction: column; /* Stack elements vertically */
 }
 
 .character-item p {
     margin-top: 5px;
     font-size: 14px;
     color: #333;
+}
+
+.categoey-name {
+    font-size: 1.3rem!important;
+    font-weight: bold;
+    margin: 5px 0 5px; /* Reduce the margin between the title and the pictures */
+    text-align: left;
+    font-family: lilita one,roboto,sans-serif;
+    text-shadow: 0 1px #ffffff!important
 }
 
 .categoey-name {

@@ -1,7 +1,7 @@
 // BrawlStars.tsx
 import { useState } from "react";
 import Question from "./question";
-import { BrawlStarsJson, Character } from "./App";
+import { BrawlStarCharacter, BrawlStarsJson } from "./App";
 
 interface QuestionData {
   question: string;
@@ -64,8 +64,8 @@ function* generateQuestions() {
   
   interface BrawlStarsProps {
     allCharacters: BrawlStarsJson;
-    characters: Character[];
-    setCharacters: React.Dispatch<React.SetStateAction<Character[]>>;
+    characters: BrawlStarCharacter[];
+    setCharacters: React.Dispatch<React.SetStateAction<BrawlStarCharacter[]>>;
   }
 
 const BrawlStars: React.FC<BrawlStarsProps> = ({ allCharacters, characters, setCharacters }) => {

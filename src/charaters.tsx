@@ -16,7 +16,6 @@ const Characters: React.FC<{ characters: BrawlStarCharacter[], categories: Categ
                     .map((character: BrawlStarCharacter) => (
                         <div key={character.name} className="character-item" style={{ borderColor: category.color }}>
                             <img src={character.imageUrlNew} title={character.name} />
-                            {/* <p>{character.name}</p> */}
                         </div>
                     ))}
                 </div>

@@ -7,41 +7,48 @@ import { useEffect, useState } from 'react';
 import Characters from './charaters';
 import brawlstarsJson from './assets/brawls.json';
 
-function getLastElement<Type>(array: Type[]): Type | undefined {
-  if (array.length === 0) return undefined;
-  return array[array.length - 1];
-}
-
-export interface Character {
+export interface BrawlStarCharacter {
   name: string;
-  image: string;
+  category: string;
+  imageUrlNew: string;
+  imageUrlOld: string;
 }
 
-const allCharacters: Character[] = brawlstarsJson.flatMap((category: string[]) => category.map(imageSrc => ({ name: getLastElement(imageSrc.split('/'))?.split('.png')[0]!, image: imageSrc })));
+export type BrawlStarsJson = {
+  [key: string]: BrawlStarCharacter;
+};
 
-// const allCharacters = [
-//   {
-//       name: "Shelly",
-//       image: "https://th.bing.com/th/id/OIP.tMaO1vPm-AiJ_Pm2YAO6mAAAAA?w=115&h=193&c=7&r=0&o=5&pid=1.7"
-//   },
-//   {
-//       name: "Leon",
-//       image: "https://th.bing.com/th/id/OIP.P6cnim9x6QykoA4R76UkIwHaFj?w=245&h=184&c=7&r=0&o=5&pid=1.7"
-//   },
-//   {
-//       name: "Nita",
-//       image: "https://th.bing.com/th/id/OIP.7UuQK6vtn88CFDzgeDy1ZgHaFj?w=226&h=180&c=7&r=0&o=5&pid=1.7"
-//   },
-//   {
-//       name: "Ruffs",
-//       image: "https://th.bing.com/th/id/OIP.N7syvExVZKzJ-TM5w5l97wHaMX?w=115&h=183&c=7&r=0&o=5&pid=1.7"
-//   },
-// ]
+export interface CategoryProperties {
+  rank: number;
+  name: string;
+  color: string;
+}
+
+export const categories: CategoryProperties[] = [
+  { rank: 0, name: 'Trophy Road', color: '#b5b5b5' },
+  { rank: 1, name: 'Rare', color: '#00ff00' },
+  { rank: 2, name: 'Super Rare', color: '#0000ff' },
+  { rank: 3, name: 'Epic', color: '#800080' },
+  { rank: 4, name: 'Mythic', color: '#ff00ff' },
+  { rank: 5, name: 'Legendary', color: '#ff8c00' },
+];
+
+const allCharacters: BrawlStarsJson = brawlstarsJson;
 
 function App() {
   const [characters, setCharacters] = useState<any[]>(() => {
     // Retrieve characters from localStorage if available
     const savedCharacters = localStorage.getItem('characters');
+    if(savedCharacters) {
+      // migrate old data
+      const parsedCharacters = JSON.parse(savedCharacters);
+      if (parsedCharacters.length > 0 && !parsedCharacters[0].category) {
+        const result = parsedCharacters.map((character: any) => {
+          return allCharacters[character.name];
+        }).filter((character: any) => character);
+        return result;
+      }
+    }
     return savedCharacters ? JSON.parse(savedCharacters) : [];
   });
 
@@ -52,7 +59,7 @@ function App() {
   
   return (
       <>
-      <Characters characters={characters} />
+      <Characters characters={characters} categories={categories} />
     <Router>
       <Routes>
         <Route path="/brawlstars" element={<BasePage children={<BrawlStars allCharacters={allCharacters} characters={characters} setCharacters={setCharacters} />}  />} />

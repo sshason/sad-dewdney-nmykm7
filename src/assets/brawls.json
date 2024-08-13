@@ -1,1 +1,494 @@
-[["https://cdn-old.brawlify.com/brawler-bs/Shelly.png"],["https://cdn-old.brawlify.com/brawler-bs/Rosa.png","https://cdn-old.brawlify.com/brawler-bs/Poco.png","https://cdn-old.brawlify.com/brawler-bs/El-Primo.png","https://cdn-old.brawlify.com/brawler-bs/Nita.png","https://cdn-old.brawlify.com/brawler-bs/Barley.png","https://cdn-old.brawlify.com/brawler-bs/Brock.png","https://cdn-old.brawlify.com/brawler-bs/Bull.png","https://cdn-old.brawlify.com/brawler-bs/Colt.png"],["https://cdn-old.brawlify.com/brawler-bs/Gus.png","https://cdn-old.brawlify.com/brawler-bs/Jacky.png","https://cdn-old.brawlify.com/brawler-bs/8-Bit.png","https://cdn-old.brawlify.com/brawler-bs/Carl.png","https://cdn-old.brawlify.com/brawler-bs/Tick.png","https://cdn-old.brawlify.com/brawler-bs/Penny.png","https://cdn-old.brawlify.com/brawler-bs/Darryl.png","https://cdn-old.brawlify.com/brawler-bs/Dynamike.png","https://cdn-old.brawlify.com/brawler-bs/Jessie.png","https://cdn-old.brawlify.com/brawler-bs/Rico.png"],["https://cdn-old.brawlify.com/brawler-bs/Berry.png","https://cdn-old.brawlify.com/brawler-bs/Angelo.png","https://cdn-old.brawlify.com/brawler-bs/Larry-&-Lawrie.png","https://cdn-old.brawlify.com/brawler-bs/Pearl.png","https://cdn-old.brawlify.com/brawler-bs/Hank.png","https://cdn-old.brawlify.com/brawler-bs/Maisie.png","https://cdn-old.brawlify.com/brawler-bs/Mandy.png","https://cdn-old.brawlify.com/brawler-bs/Sam.png","https://cdn-old.brawlify.com/brawler-bs/Bonnie.png","https://cdn-old.brawlify.com/brawler-bs/Lola.png","https://cdn-old.brawlify.com/brawler-bs/Ash.png","https://cdn-old.brawlify.com/brawler-bs/Griff.png","https://cdn-old.brawlify.com/brawler-bs/Grom.png","https://cdn-old.brawlify.com/brawler-bs/Belle.png","https://cdn-old.brawlify.com/brawler-bs/Stu.png","https://cdn-old.brawlify.com/brawler-bs/Edgar.png","https://cdn-old.brawlify.com/brawler-bs/Colette.png","https://cdn-old.brawlify.com/brawler-bs/Nani.png","https://cdn-old.brawlify.com/brawler-bs/Gale.png","https://cdn-old.brawlify.com/brawler-bs/Emz.png","https://cdn-old.brawlify.com/brawler-bs/Bea.png","https://cdn-old.brawlify.com/brawler-bs/Bibi.png","https://cdn-old.brawlify.com/brawler-bs/Frank.png","https://cdn-old.brawlify.com/brawler-bs/Pam.png","https://cdn-old.brawlify.com/brawler-bs/Piper.png","https://cdn-old.brawlify.com/brawler-bs/Bo.png"],["https://cdn-old.brawlify.com/brawler-bs/Clancy.png","https://cdn-old.brawlify.com/brawler-bs/Lily.png","https://cdn-old.brawlify.com/brawler-bs/Melodie.png","https://cdn-old.brawlify.com/brawler-bs/Mico.png","https://cdn-old.brawlify.com/brawler-bs/Charlie.png","https://cdn-old.brawlify.com/brawler-bs/Chuck.png","https://cdn-old.brawlify.com/brawler-bs/Doug.png","https://cdn-old.brawlify.com/brawler-bs/Willow.png","https://cdn-old.brawlify.com/brawler-bs/R-T.png","https://cdn-old.brawlify.com/brawler-bs/Gray.png","https://cdn-old.brawlify.com/brawler-bs/Buster.png","https://cdn-old.brawlify.com/brawler-bs/Otis.png","https://cdn-old.brawlify.com/brawler-bs/Janet.png","https://cdn-old.brawlify.com/brawler-bs/Eve.png","https://cdn-old.brawlify.com/brawler-bs/Fang.png","https://cdn-old.brawlify.com/brawler-bs/Buzz.png","https://cdn-old.brawlify.com/brawler-bs/Squeak.png","https://cdn-old.brawlify.com/brawler-bs/Ruffs.png","https://cdn-old.brawlify.com/brawler-bs/Byron.png","https://cdn-old.brawlify.com/brawler-bs/Lou.png","https://cdn-old.brawlify.com/brawler-bs/Sprout.png","https://cdn-old.brawlify.com/brawler-bs/Max.png","https://cdn-old.brawlify.com/brawler-bs/Mr-P.png","https://cdn-old.brawlify.com/brawler-bs/Gene.png","https://cdn-old.brawlify.com/brawler-bs/Tara.png","https://cdn-old.brawlify.com/brawler-bs/Mortis.png"],["https://cdn-old.brawlify.com/brawler-bs/Draco.png","https://cdn-old.brawlify.com/brawler-bs/Kit.png","https://cdn-old.brawlify.com/brawler-bs/Cordelius.png","https://cdn-old.brawlify.com/brawler-bs/Chester.png","https://cdn-old.brawlify.com/brawler-bs/Meg.png","https://cdn-old.brawlify.com/brawler-bs/Amber.png","https://cdn-old.brawlify.com/brawler-bs/Surge.png","https://cdn-old.brawlify.com/brawler-bs/Sandy.png","https://cdn-old.brawlify.com/brawler-bs/Leon.png","https://cdn-old.brawlify.com/brawler-bs/Crow.png","https://cdn-old.brawlify.com/brawler-bs/Spike.png"]]
+{
+  "Shelly": {
+    "name": "Shelly",
+    "category": "Trophy Road",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/shelly.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Shelly.png"
+  },
+  "Rosa": {
+    "name": "Rosa",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/rosa.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Rosa.png"
+  },
+  "Poco": {
+    "name": "Poco",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/poco.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Poco.png"
+  },
+  "El-Primo": {
+    "name": "El-Primo",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/el_primo.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/El-Primo.png"
+  },
+  "Nita": {
+    "name": "Nita",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/nita.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Nita.png"
+  },
+  "Barley": {
+    "name": "Barley",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/barley.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Barley.png"
+  },
+  "Brock": {
+    "name": "Brock",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/brock.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Brock.png"
+  },
+  "Bull": {
+    "name": "Bull",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/bull.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Bull.png"
+  },
+  "Colt": {
+    "name": "Colt",
+    "category": "Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/colt.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Colt.png"
+  },
+  "Gus": {
+    "name": "Gus",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/gus.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Gus.png"
+  },
+  "Jacky": {
+    "name": "Jacky",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/jacky.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Jacky.png"
+  },
+  "8-Bit": {
+    "name": "8-Bit",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/8_bit.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/8-Bit.png"
+  },
+  "Carl": {
+    "name": "Carl",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/carl.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Carl.png"
+  },
+  "Tick": {
+    "name": "Tick",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/tick.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Tick.png"
+  },
+  "Penny": {
+    "name": "Penny",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/penny.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Penny.png"
+  },
+  "Darryl": {
+    "name": "Darryl",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/darryl.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Darryl.png"
+  },
+  "Dynamike": {
+    "name": "Dynamike",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/dynamike.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Dynamike.png"
+  },
+  "Jessie": {
+    "name": "Jessie",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/jessie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Jessie.png"
+  },
+  "Rico": {
+    "name": "Rico",
+    "category": "Super Rare",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/rico.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Rico.png"
+  },
+  "Berry": {
+    "name": "Berry",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/berry.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Berry.png"
+  },
+  "Angelo": {
+    "name": "Angelo",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/angelo.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Angelo.png"
+  },
+  "Larry-&-Lawrie": {
+    "name": "Larry-&-Lawrie",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/larry_and_lawrie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Larry-&-Lawrie.png"
+  },
+  "Pearl": {
+    "name": "Pearl",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/pearl.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Pearl.png"
+  },
+  "Hank": {
+    "name": "Hank",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/hank.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Hank.png"
+  },
+  "Maisie": {
+    "name": "Maisie",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/maisie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Maisie.png"
+  },
+  "Mandy": {
+    "name": "Mandy",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/mandy.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Mandy.png"
+  },
+  "Sam": {
+    "name": "Sam",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/sam.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Sam.png"
+  },
+  "Bonnie": {
+    "name": "Bonnie",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/bonnie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Bonnie.png"
+  },
+  "Lola": {
+    "name": "Lola",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/lola.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Lola.png"
+  },
+  "Ash": {
+    "name": "Ash",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/ash.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Ash.png"
+  },
+  "Griff": {
+    "name": "Griff",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/griff.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Griff.png"
+  },
+  "Grom": {
+    "name": "Grom",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/grom.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Grom.png"
+  },
+  "Belle": {
+    "name": "Belle",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/belle.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Belle.png"
+  },
+  "Stu": {
+    "name": "Stu",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/stu.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Stu.png"
+  },
+  "Edgar": {
+    "name": "Edgar",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/edgar.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Edgar.png"
+  },
+  "Colette": {
+    "name": "Colette",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/colette.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Colette.png"
+  },
+  "Nani": {
+    "name": "Nani",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/nani.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Nani.png"
+  },
+  "Gale": {
+    "name": "Gale",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/gale.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Gale.png"
+  },
+  "Emz": {
+    "name": "Emz",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/emz.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Emz.png"
+  },
+  "Bea": {
+    "name": "Bea",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/bea.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Bea.png"
+  },
+  "Bibi": {
+    "name": "Bibi",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/bibi.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Bibi.png"
+  },
+  "Frank": {
+    "name": "Frank",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/frank.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Frank.png"
+  },
+  "Pam": {
+    "name": "Pam",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/pam.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Pam.png"
+  },
+  "Piper": {
+    "name": "Piper",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/piper.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Piper.png"
+  },
+  "Bo": {
+    "name": "Bo",
+    "category": "Epic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/bo.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Bo.png"
+  },
+  "Clancy": {
+    "name": "Clancy",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/clancy.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Clancy.png"
+  },
+  "Lily": {
+    "name": "Lily",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/lily.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Lily.png"
+  },
+  "Melodie": {
+    "name": "Melodie",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/melodie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Melodie.png"
+  },
+  "Mico": {
+    "name": "Mico",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/mico.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Mico.png"
+  },
+  "Charlie": {
+    "name": "Charlie",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/charlie.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Charlie.png"
+  },
+  "Chuck": {
+    "name": "Chuck",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/chuck.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Chuck.png"
+  },
+  "Doug": {
+    "name": "Doug",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/doug.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Doug.png"
+  },
+  "Willow": {
+    "name": "Willow",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/willow.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Willow.png"
+  },
+  "R-T": {
+    "name": "R-T",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/r_t.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/R-T.png"
+  },
+  "Gray": {
+    "name": "Gray",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/gray.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Gray.png"
+  },
+  "Buster": {
+    "name": "Buster",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/buster.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Buster.png"
+  },
+  "Otis": {
+    "name": "Otis",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/otis.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Otis.png"
+  },
+  "Janet": {
+    "name": "Janet",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/janet.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Janet.png"
+  },
+  "Eve": {
+    "name": "Eve",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/eve.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Eve.png"
+  },
+  "Fang": {
+    "name": "Fang",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/fang.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Fang.png"
+  },
+  "Buzz": {
+    "name": "Buzz",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/buzz.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Buzz.png"
+  },
+  "Squeak": {
+    "name": "Squeak",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/squeak.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Squeak.png"
+  },
+  "Ruffs": {
+    "name": "Ruffs",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/ruffs.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Ruffs.png"
+  },
+  "Byron": {
+    "name": "Byron",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/byron.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Byron.png"
+  },
+  "Lou": {
+    "name": "Lou",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/lou.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Lou.png"
+  },
+  "Sprout": {
+    "name": "Sprout",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/sprout.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Sprout.png"
+  },
+  "Max": {
+    "name": "Max",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/max.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Max.png"
+  },
+  "Mr-P": {
+    "name": "Mr-P",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/mr_p.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Mr-P.png"
+  },
+  "Gene": {
+    "name": "Gene",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/gene.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Gene.png"
+  },
+  "Tara": {
+    "name": "Tara",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/tara.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Tara.png"
+  },
+  "Mortis": {
+    "name": "Mortis",
+    "category": "Mythic",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/mortis.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Mortis.png"
+  },
+  "Draco": {
+    "name": "Draco",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/draco.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Draco.png"
+  },
+  "Kit": {
+    "name": "Kit",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/kit.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Kit.png"
+  },
+  "Cordelius": {
+    "name": "Cordelius",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/cordelius.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Cordelius.png"
+  },
+  "Chester": {
+    "name": "Chester",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/chester.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Chester.png"
+  },
+  "Meg": {
+    "name": "Meg",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/meg.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Meg.png"
+  },
+  "Amber": {
+    "name": "Amber",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/amber.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Amber.png"
+  },
+  "Surge": {
+    "name": "Surge",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/surge.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Surge.png"
+  },
+  "Sandy": {
+    "name": "Sandy",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/sandy.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Sandy.png"
+  },
+  "Leon": {
+    "name": "Leon",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/leon.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Leon.png"
+  },
+  "Crow": {
+    "name": "Crow",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/crow.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Crow.png"
+  },
+  "Spike": {
+    "name": "Spike",
+    "category": "Legendary",
+    "imageUrlNew": "https://www.noff.gg/brawl-stars/res/img/brawlers/spike.png",
+    "imageUrlOld": "https://cdn-old.brawlify.com/brawler-bs/Spike.png"
+  }
+}

@@ -1,20 +1,40 @@
 /* Characters.css */
 .characters-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap; /* Allow the container to wrap its children */
-    border: 1px solid #ccc; /* Add a border */
-    padding: 10px;
-    min-height: 100px; /* Ensure the container has an initial height */
+    max-height: 80px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
   }
   
   .character-item {
-    margin-right: 10px;
+    margin-right: 4px;
     text-align: center;
+    border: 2px solid; /* Border color will be set inline */
+    background-color: white;
   }
   
   .character-item img {
-    width: 100px; /* Set a fixed width */
-    height: 100px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
+    width: 50px;
+    height: 70px; /* Set a fixed height */
+    object-fit: scale-down; /* Ensure the image covers the area without stretching */
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.character-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.categoey-name {
+    font-size: 1.3rem!important;
+    font-weight: bold;
+    margin: 5px 0 5px; /* Reduce the margin between the title and the pictures */
+    text-align: left;
+    font-family: lilita one,roboto,sans-serif;
+    text-shadow: 0 1px #ffffff!important
 }

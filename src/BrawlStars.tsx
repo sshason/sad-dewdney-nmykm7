@@ -1,7 +1,7 @@
 // BrawlStars.tsx
 import { useState } from "react";
 import Question from "./question";
-import { Character } from "./App";
+import { BrawlStarsJson, Character } from "./App";
 
 interface QuestionData {
   question: string;
@@ -10,7 +10,7 @@ interface QuestionData {
 }
 
 function* generateQuestions() {
-  const generateQuestionData = (): QuestionData => {
+  const generateQuestionAdditionData = (): QuestionData => {
     const num1 = Math.floor(Math.random() * 10) + 1;
     const num2 = Math.floor(Math.random() * 5) + 1;
     const answer = num1 + num2;
@@ -32,15 +32,38 @@ function* generateQuestions() {
     };
   };
 
+  const generateSubtractionQuestionData = (): QuestionData => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * Math.min(num1+1, 5));
+    const answer = num1 - num2;
+    const choices = [answer.toString()];
+
+    while (choices.length < 4) {
+      const randomChoice = Math.floor(Math.random() * 20) + 1;
+      if (!choices.includes(randomChoice.toString())) {
+        choices.push(randomChoice.toString());
+      }
+    }
+
+    choices.sort(() => Math.random() - 0.5);
+
+    return {
+      question: `${num1} - ${num2} = ?`,
+      choices,
+      correctChoice: answer.toString(),
+    };
+  }
+
   while (true) {
-    yield generateQuestionData();
+    const randomOperation = Math.random() < 0.7 ? generateQuestionAdditionData : generateSubtractionQuestionData;
+    yield randomOperation();
   }
 }
 
 
   
   interface BrawlStarsProps {
-    allCharacters: Character[];
+    allCharacters: BrawlStarsJson;
     characters: Character[];
     setCharacters: React.Dispatch<React.SetStateAction<Character[]>>;
   }
@@ -50,7 +73,7 @@ const BrawlStars: React.FC<BrawlStarsProps> = ({ allCharacters, characters, setC
   const [question, setQuestion] = useState<QuestionData>(questionsGenerator.next().value!);
 
   const drawCharacter: () => void  = () => {
-    const charactersNotInList = allCharacters.filter(character => !characters.map(c=>c.name).includes(character.name));
+    const charactersNotInList = Object.values(allCharacters).filter(character => !characters.map(c=>c.name).includes(character.name));
     if (charactersNotInList.length === 0) {
       return;
     }

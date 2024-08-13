@@ -1,15 +1,27 @@
 import React from 'react';
 import './Characters.css'; // Import the CSS file
+import { BrawlStarCharacter, CategoryProperties } from './App';
 
-const Characters: React.FC<{ characters: { name: string, image: string }[] }> = ({ characters }) => {
+const Characters: React.FC<{ characters: BrawlStarCharacter[], categories: CategoryProperties[] }> = ({ characters, categories }) => {
     return (
-        <div className="characters-container">
-            {characters.map((character: { name: string, image: string }) => (
-                <div key={character.name} className="character-item">
-                    <img src={character.image} alt={character.name} />
-                    <p>{character.name}</p>
+        <div>
+        {categories
+        .filter((category: CategoryProperties) => characters.some((character: BrawlStarCharacter) => character.category === category.name))
+        .map((category: CategoryProperties) => (
+            <div key={category.name} className="category">
+                <h2 className='categoey-name' style={{ color: category.color }}>{category.name}</h2>
+                <div className="characters-container">
+                    {characters
+                    .filter((character: BrawlStarCharacter) => character.category === category.name)
+                    .map((character: BrawlStarCharacter) => (
+                        <div key={character.name} className="character-item" style={{ borderColor: category.color }}>
+                            <img src={character.imageUrlNew} title={character.name} />
+                            {/* <p>{character.name}</p> */}
+                        </div>
+                    ))}
                 </div>
-            ))}
+            </div>
+        ))}
         </div>
     );
 };

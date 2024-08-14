@@ -78,16 +78,19 @@ const BrawlStars: React.FC<BrawlStarsProps> = ({ allCharacters, characters, setC
       return;
     }
     const randomIndex = Math.floor(Math.random() * charactersNotInList.length);
-    setCharacters([...characters, charactersNotInList[randomIndex]]);
+    const newCharacter = charactersNotInList[randomIndex];
+    newCharacter.isNew = true;
+    const updatedCharacters = characters.map(c => ({...c, isNew: false}));
+    setCharacters([...updatedCharacters, newCharacter]);
   }
 
   const removeCharacter = () => {
     if (characters.length === 0) {
       return;
     }
-    const randomIndex = characters.length - 1;
+    const lastIndex = characters.length - 1;
     const newCharacters = [...characters];
-    newCharacters.splice(randomIndex, 1);
+    newCharacters.splice(lastIndex, 1);
     setCharacters(newCharacters);
   }
 

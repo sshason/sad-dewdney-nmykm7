@@ -12,6 +12,7 @@ export interface BrawlStarCharacter {
   category: string;
   imageUrlNew: string;
   imageUrlOld: string;
+  isNew?: boolean;
 }
 
 export type BrawlStarsJson = {
@@ -49,7 +50,11 @@ function App() {
         return result;
       }
     }
-    return savedCharacters ? JSON.parse(savedCharacters) : [];
+    const result = savedCharacters ? JSON.parse(savedCharacters) : [];
+    result.forEach((c: BrawlStarCharacter) => {
+      c.isNew = false;
+    });
+    return result;
   });
 
   useEffect(() => {
@@ -62,7 +67,7 @@ function App() {
       <Characters characters={characters} categories={categories} />
     <Router>
       <Routes>
-        <Route path="/brawlstars" element={<BasePage children={<BrawlStars allCharacters={allCharacters} characters={characters} setCharacters={setCharacters} />}  />} />
+        <Route path="/brawlstars" element={<BasePage children={<BrawlStars allCharacters={allCharacters} characters={[...characters]} setCharacters={setCharacters} />}  />} />
         <Route path="/" element={<Menu />} />
       </Routes>
     </Router>

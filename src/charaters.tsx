@@ -14,8 +14,11 @@ const Characters: React.FC<{ characters: BrawlStarCharacter[], categories: Categ
                     {characters
                     .filter((character: BrawlStarCharacter) => character.category === category.name)
                     .map((character: BrawlStarCharacter) => (
-                        <div key={character.name} className="character-item" style={{ borderColor: category.color }}>
-                            <img src={character.imageUrlNew} title={character.name} />
+                        <div className='single-character-container'>
+                            <div key={character.name} className={character.isNew ? 'character-item new-character' : 'character-item'} style={{ borderColor: category.color }}>
+                                <img src={character.imageUrlNew} title={character.name} />
+                            </div>
+                            <p className='character-name'>{character.name}</p>
                         </div>
                     ))}
                 </div>

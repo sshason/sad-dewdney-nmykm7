@@ -1,0 +1,44 @@
+/* Main container for the tournament map */
+.tournament-map {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* Container for each match */
+.match-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 10px;
+    width: 190px;
+    text-align: center;
+}
+
+/* Active match container */
+.match-container.active-match {
+    border-color: green;
+    border-width: 2px;
+}
+
+/* Headings for round and match details */
+.match-container h2 {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.match-container h3 {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+/* Images for characters */
+.match-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 5px;
+    object-fit: scale-down; /* Ensure the image covers the area without stretching */
+}

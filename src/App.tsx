@@ -4,8 +4,11 @@ import Menu from './menu'; // Adjust the path if necessary
 import BrawlStars from './BrawlStars'; // Adjust the path if necessary
 import BasePage from './BasePage';
 import { useEffect, useState } from 'react';
-import Characters from './charaters';
 import brawlstarsJson from './assets/brawls.json';
+import Game from './BrawlstartsOlympics/Tournament';
+import GoldMedal from './assets/gold_medal.jpeg'
+import SilverMedal from './assets/silver_medal.jpeg'
+import BronzeMedal from './assets/bronze_medal.jpeg'
 
 export interface BrawlStarCharacter {
   name: string;
@@ -13,6 +16,9 @@ export interface BrawlStarCharacter {
   imageUrlNew: string;
   imageUrlOld: string;
   isNew?: boolean;
+  gold?: number;
+  silver?: number;
+  bronze?: number;
 }
 
 export type BrawlStarsJson = {
@@ -33,6 +39,19 @@ export const categories: CategoryProperties[] = [
   { rank: 4, name: 'Mythic', color: '#ff00ff' },
   { rank: 5, name: 'Legendary', color: '#ff8c00' },
 ];
+
+export enum Prize {
+  None = 0,
+  Bronze = 1,
+  Silver = 2,
+  Gold = 3,
+}
+
+export const PrizeToImage = {
+  [Prize.Gold]: GoldMedal,
+  [Prize.Silver]: SilverMedal,
+  [Prize.Bronze]: BronzeMedal,
+};
 
 const allCharacters: BrawlStarsJson = brawlstarsJson;
 
@@ -61,13 +80,24 @@ function App() {
     // Store characters in localStorage whenever it changes
     localStorage.setItem('characters', JSON.stringify(characters));
   }, [characters]);
+
+  const updateCharacter = (newCharacter: BrawlStarCharacter) => {
+    const updatedCharacters = characters.map((character: BrawlStarCharacter) => {
+      if (character.name === newCharacter.name) {
+        console.log('updatedCharacter', newCharacter);
+        return newCharacter;
+      }
+      return character;
+    });
+    setCharacters(updatedCharacters);
+  }
   
   return (
       <>
-      <Characters characters={characters} categories={categories} />
     <Router>
       <Routes>
-        <Route path="/brawlstars" element={<BasePage children={<BrawlStars allCharacters={allCharacters} characters={[...characters]} setCharacters={setCharacters} />}  />} />
+        <Route path="/brawlstars" element={<BasePage children={<BrawlStars allCharacters={allCharacters} characters={[...characters]} categories={categories} setCharacters={setCharacters} />}  />} />
+        <Route path="/brawlstarsOlympics" element={<BasePage children={<Game characters={[...characters]} categories={categories} updateCharacter={updateCharacter}/>}  />} />
         <Route path="/" element={<Menu />} />
       </Routes>
     </Router>

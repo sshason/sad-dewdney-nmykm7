@@ -1,8 +1,15 @@
 import React from 'react';
 import './Characters.css'; // Import the CSS file
 import { BrawlStarCharacter, CategoryProperties } from './App';
+import CharacterMedals from './CharacterMedals';
 
-const Characters: React.FC<{ characters: BrawlStarCharacter[], categories: CategoryProperties[] }> = ({ characters, categories }) => {
+interface CharactersProps {
+    characters: BrawlStarCharacter[];
+    categories: CategoryProperties[];
+    onSelect?: (char: BrawlStarCharacter) => void;
+}
+
+const Characters: React.FC<CharactersProps> = ({ characters, categories, onSelect }) => {
     return (
         <div>
         {categories
@@ -14,11 +21,12 @@ const Characters: React.FC<{ characters: BrawlStarCharacter[], categories: Categ
                     {characters
                     .filter((character: BrawlStarCharacter) => character.category === category.name)
                     .map((character: BrawlStarCharacter) => (
-                        <div className='single-character-container'>
+                        <div className='single-character-container' onClick={() => onSelect && onSelect(character)}>
                             <div key={character.name} className={character.isNew ? 'character-item new-character' : 'character-item'} style={{ borderColor: category.color }}>
                                 <img src={character.imageUrlNew} title={character.name} />
                             </div>
                             <p className='character-name'>{character.name}</p>
+                            <CharacterMedals character={character} />
                         </div>
                     ))}
                 </div>

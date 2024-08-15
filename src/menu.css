@@ -5,6 +5,7 @@
     align-items: center;
     height: 70vh;
     text-align: center;
+    margin: 10px;
   }
   
   .menu-item {
@@ -28,8 +29,8 @@
   
   .menu-item-image {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 250px;
+    object-fit: scale-down;
   }
   
   .menu-item-name {

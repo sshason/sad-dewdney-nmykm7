@@ -24,8 +24,9 @@
     transition: background-color 0.3s ease;
 }
 
-.choice-item:hover {
-    background-color: #f0f0f0;
+.choice-item:active {
+    background-color: #e0e0e0; /* Change to a visible color */
+    color: #000; /* Ensure text color is visible */
 }
 
 .selected-choice {

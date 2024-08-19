@@ -53,7 +53,7 @@ export interface QuestionData {
     }
   
     while (true) {
-      const randomOperation = Math.random() < 1 ? generateQuestionAdditionData : generateSubtractionQuestionData;
+      const randomOperation = Math.random() < 0 ? generateQuestionAdditionData : generateSubtractionQuestionData;
       yield randomOperation();
     }
   }

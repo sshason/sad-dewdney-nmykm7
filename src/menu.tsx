@@ -8,7 +8,6 @@ import volfied from './assets/volfied.png';
 import FrogImage from './assets/frog.webp';
 import { Link } from 'react-router-dom';
 
-
 const menuItems = [
   { name: 'גלגל שמות', image: WheelFamilyNames, url: 'https://wheelofnames.com/he/n7s-4x8' },
   { name: 'צבעים באנגלית', image: WheelColorImage, url: 'https://wheelofnames.com/he/syn-h4n' },
@@ -22,19 +21,27 @@ const menuItems = [
 ];
 
 const Menu: React.FC = () => {
-    return (
-      <>
-        <h1>המחשב של תום</h1>
-        <div className="menu-container">
-          {menuItems.map((item) => (
-          <Link to={item.url} rel="noopener noreferrer" className="menu-item">
-            <img src={item.image} alt={item.name} className="menu-item-image" />
-            <div className="menu-item-name">{item.name}</div>
-          </Link>
-          ))}
-        </div>
-      </>
-    );
-  };
+  return (
+    <>
+      <h1>המחשב של תום</h1>
+      <div className="menu-container">
+        {menuItems.map((item) => {
+          const isExternal = item.url.startsWith('http');
+          return isExternal ? (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className="menu-item" key={item.name}>
+              <img src={item.image} alt={item.name} className="menu-item-image" />
+              <div className="menu-item-name">{item.name}</div>
+            </a>
+          ) : (
+            <Link to={item.url} className="menu-item" key={item.name}>
+              <img src={item.image} alt={item.name} className="menu-item-image" />
+              <div className="menu-item-name">{item.name}</div>
+            </Link>
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
 export default Menu;

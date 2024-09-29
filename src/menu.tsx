@@ -4,6 +4,7 @@ import WheelBodyPartsImage from './assets/wheel_body_parts.jpg';
 import WheelColorImage from './assets/wheel_colors.png';
 import WheelFamilyNames from './assets/wheel_family_names.png';
 import BrawlStarsOlympics from './assets/brawlstars_olympics.jpg';
+import volfied from './assets/volfied.png';
 import FrogImage from './assets/frog.webp';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ const menuItems = [
   { name: 'חשבון', image: 'https://th.bing.com/th/id/OIP.YQt1G5Ho2Gv6jzCcktHDpwHaHa?w=165&h=180&c=7&r=0&o=5&pid=1.7', url: 'https://www.matific.com/students/app/7.5.7/lite/' },
   { name: 'Brawl Stars', image: 'https://th.bing.com/th/id/OIP.jts_eWK_m0N25cf5oATDFAHaEK?w=321&h=180&c=7&r=0&o=5&pid=1.7', url: '/brawlstars' },
   { name: 'Brawl Olympics', image: BrawlStarsOlympics, url: '/brawlstarsOlympics' },
+  { name: 'Volfied', image: volfied, url: 'https://sshason.github.io/games.html?game=volfied' },
 ];
 
 const Menu: React.FC = () => {

@@ -1,6 +1,6 @@
 // BrawlStars.tsx
 import { useState } from "react";
-import Question, { generateQuestions, QuestionData } from "./question";
+import Question, { generateQuestions, QuestionData, QuestionType } from "./question";
 import { BrawlStarCharacter, BrawlStarsJson, CategoryProperties } from "./App";
 import Characters from "./charaters";
 
@@ -13,7 +13,7 @@ interface BrawlStarsProps {
 }
 
 const BrawlStars: React.FC<BrawlStarsProps> = ({ allCharacters, characters, categories, setCharacters }) => {
-  const questionsGenerator = generateQuestions();
+  const questionsGenerator = generateQuestions(QuestionType.DecimalAddition);
   const [question, setQuestion] = useState<QuestionData>(questionsGenerator.next().value!);
 
   const drawCharacter: () => void  = () => {

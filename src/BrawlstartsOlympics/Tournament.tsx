@@ -4,6 +4,7 @@ import GameRound from './GameRound';
 import { BrawlStarCharacter, CategoryProperties, Prize } from '../App';
 import TournamentMap from './TournamentMap';
 import TournamentResult from './TournamentResult';
+import {generateQuestions, QuestionType} from "../question";
 
 interface GameProps {
     characters: BrawlStarCharacter[];
@@ -11,11 +12,16 @@ interface GameProps {
     updateCharacter: (characters: BrawlStarCharacter) => void;
 }
 
-enum Round {
+export enum Round {
     QuarterFinal = 'Quarter Final',
     SemiFinal = 'Semi Final',
     Final = 'Final',
 }
+
+export const roundToQuestionTypeMap = new Map<Round, QuestionType>();
+roundToQuestionTypeMap.set(Round.QuarterFinal, QuestionType.Addition);
+roundToQuestionTypeMap.set(Round.SemiFinal, QuestionType.Substraction);
+roundToQuestionTypeMap.set(Round.Final, QuestionType.DecimalAddition);
 
 function getNextPrize(prize: Prize): Prize {
     return prize + 1
@@ -47,6 +53,10 @@ const Game: React.FC<GameProps> = ({characters, categories, updateCharacter}) =>
     const [showTorunamentResult, setShowTournamentResult] = useState(false);
     const [isWin, setIsWin] = useState(false);
     const [currentPrize, setCurrentPrize] = useState(Prize.None);
+    const [currentRound, setCurrentRound] = useState(Round.QuarterFinal);
+    const [questionType, setQuestionType] = useState(roundToQuestionTypeMap.get(currentRound)!);
+    const [questionsGenerator, setQuestionGenerator] = useState(generateQuestions(questionType));
+    const [currentQuestion, setCurrentQuestion] = useState(questionsGenerator.next().value!);
   
     const handleCharacterSelect = (char: BrawlStarCharacter) => {
       setSelectedCharacter(char);
@@ -66,6 +76,7 @@ const Game: React.FC<GameProps> = ({characters, categories, updateCharacter}) =>
         onTournamentComplete(prize);
       } else {
         setCurrentMatchIndex((prevMatch: number) => prevMatch + 1);
+        updateQuestion(matches[currentMatchIndex + 1]);
       }
     };
 
@@ -88,6 +99,16 @@ const Game: React.FC<GameProps> = ({characters, categories, updateCharacter}) =>
       const newMatches = [...matches];
       newMatches[currentMatchIndex] = match;
       setMatches(newMatches);
+      setCurrentRound(match.round);
+      updateQuestion(match);
+    }
+
+    const updateQuestion = (match: Match) => {
+      setCurrentRound(match.round);
+      setQuestionType(roundToQuestionTypeMap.get(match.round)!);
+      const generator = generateQuestions(roundToQuestionTypeMap.get(match.round)!);
+      setQuestionGenerator(generator);
+      setCurrentQuestion(generator.next().value!);
     }
 
     const handleRestart = () => {
@@ -108,7 +129,7 @@ const Game: React.FC<GameProps> = ({characters, categories, updateCharacter}) =>
         return (
             <div>
                 <TournamentMap matches={matches} activeMatchIndex={currentMatchIndex} />
-                <GameRound match={matches[currentMatchIndex]} onLost={handleLost} onWin={handleWin} updateCurrentMatch={updateCurrentMatch} />
+                <GameRound match={matches[currentMatchIndex]} question={currentQuestion} onLost={handleLost} onWin={handleWin} updateCurrentMatch={updateCurrentMatch} />
                 { showTorunamentResult && <TournamentResult isWin={isWin} onRestart={handleRestart} onClose={handleRestart} character={selectedCharacter} prize={currentPrize} />}
             </div>
         );

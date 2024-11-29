@@ -2,6 +2,7 @@ import React from 'react';
 import './Characters.css'; // Import the CSS file
 import { BrawlStarCharacter, CategoryProperties } from './App';
 import CharacterMedals from './CharacterMedals';
+import { fixImageUrl } from './utils';
 
 interface CharactersProps {
     characters: BrawlStarCharacter[];
@@ -23,7 +24,7 @@ const Characters: React.FC<CharactersProps> = ({ characters, categories, onSelec
                     .map((character: BrawlStarCharacter) => (
                         <div className='single-character-container' onClick={() => onSelect && onSelect(character)}>
                             <div key={character.name} className={character.isNew ? 'character-item new-character' : 'character-item'} style={{ borderColor: category.color }}>
-                                <img src={character.imageUrlNew} title={character.name} />
+                                <img src={fixImageUrl(character.imageUrlNew)} title={character.name} />
                             </div>
                             <p className='character-name'>{character.name}</p>
                             <CharacterMedals character={character} />

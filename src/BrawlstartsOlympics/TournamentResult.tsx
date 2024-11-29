@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import './TournamentResult.css';
 import { BrawlStarCharacter, Prize, PrizeToImage } from '../App';
+import { fixImageUrl } from '../utils';
 
 interface TournamentResultProps {
     isWin: boolean;
@@ -24,7 +25,7 @@ const TournamentResult: React.FC<TournamentResultProps> = ({ isWin, onClose, onR
             <div className="tournament-result">
                 <h1 className='title'>{isWin ? 'Congratulations!' : 'You lost the tournament!'}</h1>
                 <p>{isWin ? 'You are the champion!' : 'Better luck next time!'}</p>
-                <img src={character.imageUrlNew} alt={character.name} className="character-image" />
+                <img src={fixImageUrl(character.imageUrlNew)} alt={character.name} className="character-image" />
                 {prize != Prize.None && <div><p>You won</p><img src={PrizeToImage[prize]} /></div>}
                 <button onClick={onClose}>Close</button>
             </div>

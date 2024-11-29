@@ -6,55 +6,89 @@ export interface QuestionData {
     choices: string[];
     correctChoice: string;
   }
-  
-  export function* generateQuestions() {
-    const generateQuestionAdditionData = (): QuestionData => {
-      const num1 = Math.floor(Math.random() * 10) + 1;
-      const num2 = Math.floor(Math.random() * 5) + 1;
-      const answer = num1 + num2;
-      const choices = [answer.toString()];
-  
-      while (choices.length < 4) {
-        const randomChoice = Math.floor(Math.random() * 20) + 1;
-        if (!choices.includes(randomChoice.toString())) {
-          choices.push(randomChoice.toString());
-        }
-      }
-  
-      choices.sort(() => Math.random() - 0.5);
-  
-      return {
-        question: `${num1} + ${num2} = ?`,
-        choices,
-        correctChoice: answer.toString(),
-      };
-    };
-  
-    const generateSubtractionQuestionData = (): QuestionData => {
-      const num1 = Math.floor(Math.random() * 10) + 1;
-      const num2 = Math.floor(Math.random() * Math.min(num1+1, 5));
-      const answer = num1 - num2;
-      const choices = [answer.toString()];
-  
-      while (choices.length < 4) {
-        const randomChoice = Math.floor(Math.random() * 20) + 1;
-        if (!choices.includes(randomChoice.toString())) {
-          choices.push(randomChoice.toString());
-        }
-      }
-  
-      choices.sort(() => Math.random() - 0.5);
-  
-      return {
-        question: `${num1} - ${num2} = ?`,
-        choices,
-        correctChoice: answer.toString(),
-      };
+
+export enum QuestionType {
+  Addition,
+  Substraction,
+  DecimalAddition
+}
+
+const generateQuestionAdditionData = (): QuestionData => {
+  const num1 = Math.floor(Math.random() * 10) + 1;
+  const num2 = Math.floor(Math.random() * 5) + 1;
+  const answer = num1 + num2;
+  const choices = [answer.toString()];
+
+  while (choices.length < 4) {
+    const randomChoice = Math.floor(Math.random() * 20) + 1;
+    if (!choices.includes(randomChoice.toString())) {
+      choices.push(randomChoice.toString());
     }
+  }
+
+  choices.sort(() => Math.random() - 0.5);
+
+  return {
+    question: `${num1} + ${num2} = ?`,
+    choices,
+    correctChoice: answer.toString(),
+  };
+};
+
+const generateSubtractionQuestionData = (): QuestionData => {
+  const num1 = Math.floor(Math.random() * 10) + 1;
+  const num2 = Math.floor(Math.random() * Math.min(num1+1, 5));
+  const answer = num1 - num2;
+  const choices = [answer.toString()];
+
+  while (choices.length < 4) {
+    const randomChoice = Math.floor(Math.random() * 20) + 1;
+    if (!choices.includes(randomChoice.toString())) {
+      choices.push(randomChoice.toString());
+    }
+  }
+
+  choices.sort(() => Math.random() - 0.5);
+
+  return {
+    question: `${num1} - ${num2} = ?`,
+    choices,
+    correctChoice: answer.toString(),
+  };
+}
+
+const generateDecimalAdditionQuestionData = (): QuestionData => {
+  const num1 = Math.floor(Math.random() * 91);
+  const num2 = 10;
+  const answer = num1 + num2;
+  const choices = [answer.toString()];
+
+  while (choices.length < 4) {
+    const randomChoice = Math.floor(Math.random() * 101);
+    if (!choices.includes(randomChoice.toString())) {
+      choices.push(randomChoice.toString());
+    }
+  }
+
+  choices.sort(() => Math.random() - 0.5);
+
+  return {
+    question: `${num1} + ${num2} = ?`,
+    choices,
+    correctChoice: answer.toString(),
+  };
+}
+
+const questionGenerators: Record<QuestionType, () => QuestionData> = {
+  [QuestionType.Addition]: generateQuestionAdditionData,
+  [QuestionType.Substraction]: generateSubtractionQuestionData,
+  [QuestionType.DecimalAddition]: generateDecimalAdditionQuestionData
+};
   
+  export function* generateQuestions(questionType: QuestionType) {
+    const generator = questionGenerators[questionType];
     while (true) {
-      const randomOperation = Math.random() < 0 ? generateQuestionAdditionData : generateSubtractionQuestionData;
-      yield randomOperation();
+      yield generator();
     }
   }
 

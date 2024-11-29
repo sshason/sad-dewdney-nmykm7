@@ -1,6 +1,7 @@
 import React from 'react';
 import { Match } from "./Tournament";
 import './TournamentMap.css';
+import { fixImageUrl } from '../utils';
 
 interface TournamentMapProps {
     matches: Match[];
@@ -17,8 +18,8 @@ const TournamentMap: React.FC<TournamentMapProps> = ({ matches, activeMatchIndex
                     <div className="score">
                         <span>{match.score.character}</span> - <span>{match.score.opponent}</span>
                     </div>
-                    <img src={match.character.imageUrlNew} alt={match.character.name} />
-                    <img src={match.opponent.imageUrlNew} alt={match.opponent.name} />
+                    <img src={fixImageUrl(match.character.imageUrlNew)} alt={match.character.name} />
+                    <img src={fixImageUrl(match.opponent.imageUrlNew)} alt={match.opponent.name} />
                 </div>
             ))}
         </div>

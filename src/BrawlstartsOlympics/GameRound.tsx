@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Question, { generateQuestions, QuestionData } from "../question";
+import React, { useEffect } from "react";
+import Question, { QuestionData } from "../question";
 import { Match } from "./Tournament";
+
 
 interface GameRoundProps {
     match: Match;
+    question: QuestionData;
     onWin: () => void;
     onLost: () => void;
     updateCurrentMatch: (match: Match) => void;
 }
 
-const GameRound: React.FC<GameRoundProps> = ({ match, onWin, onLost, updateCurrentMatch }) => {
-    const questionsGenerator = generateQuestions();
-    const [question, setQuestion] = useState<QuestionData>(questionsGenerator.next().value!);
-  
+
+const GameRound: React.FC<GameRoundProps> = ({ match, question, onWin, onLost, updateCurrentMatch }) => {
     useEffect(() => {
         if (match.score.character + match.score.opponent === 3) {
             if (match.score.character > match.score.opponent) {
@@ -27,14 +27,12 @@ const GameRound: React.FC<GameRoundProps> = ({ match, onWin, onLost, updateCurre
         const newMatch = { ...match };
         newMatch.score.character++;
         updateCurrentMatch(newMatch);
-        setQuestion(questionsGenerator.next().value!);
     };
 
     const onFailedAnswer = () => {
         const newMatch = { ...match };
         newMatch.score.opponent++;
         updateCurrentMatch(newMatch);
-        setQuestion(questionsGenerator.next().value!);
       };
   
     return (
